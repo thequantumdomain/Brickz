@@ -1,7 +1,13 @@
+The issue with your `package.json` file is due to a missing comma in the `dependencies` section. The JSON format requires that items in an object are separated by commas. In your current file, there is no comma between the `"web-vitals": "^2.1.4"` line and the `"homepage": "https://thequantumdomain.github.io/brickz/"` line. Additionally, `"homepage"` should be a top-level field, not inside `"dependencies"`.
+
+Here's the corrected `package.json` file:
+
+```json
 {
   "name": "brickz",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thequantumdomain.github.io/brickz/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,7 +16,6 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-    "homepage": "https://thequantumdomain.github.io/brickz/"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +43,4 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "@openzeppelin/contracts": "^4.7.3",
-    "hardhat": "^2.12.0"
-  }
-}
+    "@openzeppelin/contracts": "^4.7.3,
