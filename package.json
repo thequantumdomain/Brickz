@@ -1,8 +1,3 @@
-The issue with your `package.json` file is due to a missing comma in the `dependencies` section. The JSON format requires that items in an object are separated by commas. In your current file, there is no comma between the `"web-vitals": "^2.1.4"` line and the `"homepage": "https://thequantumdomain.github.io/brickz/"` line. Additionally, `"homepage"` should be a top-level field, not inside `"dependencies"`.
-
-Here's the corrected `package.json` file:
-
-```json
 {
   "name": "brickz",
   "version": "0.1.0",
@@ -43,4 +38,7 @@ Here's the corrected `package.json` file:
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "@openzeppelin/contracts": "^4.7.3,
+    "@openzeppelin/contracts": "^4.7.3",
+    "hardhat": "^2.12.0"
+  }
+}
